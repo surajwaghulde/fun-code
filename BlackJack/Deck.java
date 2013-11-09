@@ -8,6 +8,7 @@ public class Deck {
 	
 	private Card[] deck;
 	private int current;
+	int round;
 	
 	public Deck() {
 		deck = new Card[DECK_SIZE];
