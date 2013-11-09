@@ -17,6 +17,17 @@ public class Deck {
 				deck[i++] = new Card(r, s);
 	}
 	
+	public Card draw() {
+		if (current < deck.length)
+			return deck[current++];
+		else
+			return null;
+	}
+	
+	public boolean hasNext() {
+		return current < deck.length;
+	}
+	
 	public void shuffle() {		
 		for(int i=0; i<deck.length; i++) {
 			int shuffleIndex = ((int)(Math.random() * i) - i) + i;
