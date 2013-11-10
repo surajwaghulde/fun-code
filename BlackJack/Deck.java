@@ -25,8 +25,11 @@ public class Deck {
 	public Card draw() {
 		if (current < deck.length)
 			return deck[current++];
-		else
-			return null;
+		else {
+			System.out.println("Deck has few cards to continue the game");
+			throw new RuntimeException("Deck has few cards to continue the game");
+		}
+		
 	}
 	
 	public boolean hasNext() {
@@ -38,6 +41,7 @@ public class Deck {
 			int shuffleIndex = ((int)(Math.random() * (deck.length - i)) + i);  // shuffle with equal probability
 			swapCards(shuffleIndex, i);
 		}
+		current = 0;
 	}
 
 	public void swapCards(int shuffleIndex, int current) {

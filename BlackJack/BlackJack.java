@@ -14,7 +14,6 @@ public class BlackJack {
 	private static Scanner input;
 	
 	private Deck deck;
-	private ArrayList<Hand> hands = new ArrayList<Hand>();
 	private Player player;
 	private String playerName;
 	private int round;
@@ -22,10 +21,32 @@ public class BlackJack {
 	private Move nextMove;
 	private Card nextCard;
 	private static boolean gameOver;
+	Hand playerHand;
+	Hand dealerHand;
 
 	static {
 		output = System.out;
 		input = new Scanner(System.in);
+	}
+	
+	public void initialDistributionOfCards() {
+		for(int i = 0; i < defaultSize; i++){
+			playerHand.getNextCard(deck);
+			dealerHand.getNextCard(deck);
+		}
+		playerHand.updatePoints();
+		dealerHand.updatePoints();
+		System.out.println("player cards");
+		for(Card card : playerHand.getCards()) {
+			System.out.println(card.toString());
+		}
+		
+		System.out.println("dealer cards");
+		for(Card card : dealerHand.getCards()) {
+			System.out.println(card.toString());
+		}
+		System.out.println(player.getName() + " total points " + playerHand.getTotalPoints());
+		System.out.println("Dealer total points " + dealerHand.getTotalPoints());
 	}
 
 	public void playBlackJack() {
@@ -37,35 +58,15 @@ public class BlackJack {
 			deck.shuffle();
 		}
 		
-		Hand playerHand = new Hand(playerName);
-		Hand dealerHand = new Hand("dealer");
-		hands.add(playerHand);
-		hands.add(dealerHand);
-		
-		for(int i = 0; i < defaultSize; i++){
-			playerHand.getNextCard(deck);
-			dealerHand.getNextCard(deck);
-		}
-		playerHand.updatePoints();
-		dealerHand.updatePoints();
-		System.out.println(player.getName() + " total points " + playerHand.getTotalPoints());
-		System.out.println("Dealer total points " + dealerHand.getTotalPoints());
+		playerHand = new Hand(playerName);
+		dealerHand = new Hand("dealer");
+		initialDistributionOfCards();
 		
 		while(true) {
 			System.out.println("Round " + round);
 			if(round++%6 == 0) {
 				deck.shuffle();
-			}
-			
-			System.out.println("player cards");
-			for(Card card : playerHand.getCards()) {
-				System.out.println(card.toString());
-			}
-			
-			System.out.println("dealer cards");
-			for(Card card : dealerHand.getCards()) {
-				System.out.println(card.toString());
-			}
+			}			
 			
 			output.println();
 			output.println("Enter next move ");
@@ -78,6 +79,7 @@ public class BlackJack {
 					}
 					break;
 				case STAND :
+					playerHand.doStand();
 					break;
 				case DOUBLE :
 					if(playerHand.checkDouble()) {
@@ -117,18 +119,24 @@ public class BlackJack {
 			System.out.println("Dealer total points " + dealerHand.getTotalPoints());
 			
 			if(dealerHand.isBusted()) {
-				playerWon(player);
-				System.out.println("Dealer is busted with points " + dealerHand.getTotalPoints() + " and you won this game.");
+				if(playerHand.isBusted()) {
+					System.out.println("Both players are busted.");
+					playerLost(player);
+				}
+				else {
+					playerWon(player);
+					System.out.println("Dealer is busted with points " + dealerHand.getTotalPoints() + " and you won this game.");					
+				}
 				gameOver = true;
 			}
 			
-			if(playerHand.isBusted()) {
+			if(playerHand.isBusted() && !gameOver) {
 				playerLost(player);
 				System.out.println(player.getName() + " is busted and lost this game.");
 				gameOver = true;
 			}
 			
-			if(!dealerHand.isSoft17()) {
+			if(!dealerHand.isSoft17() && !gameOver) {
 				if(playerHand.getTotalPoints() > dealerHand.getTotalPoints()) {
 					playerWon(player);
 					System.out.println("Congratulations you won the game");
@@ -136,16 +144,34 @@ public class BlackJack {
 				}
 			}						
 			
-			if(playerHand.stand || playerHand.doubleDown) {
+			if(((playerHand.stand  && !dealerHand.isSoft17()) || playerHand.doubleDown) && !gameOver) {
 				if(dealerHand.getTotalPoints() > playerHand.getTotalPoints()) {
 					playerLost(player);
-					System.out.println("Congratulations you won the game");
+					System.out.println("dealer won the game");
 					gameOver = true;
+				}
+				else {
+					if(dealerHand.getTotalPoints() == playerHand.getTotalPoints()) {
+						System.out.println("equal points - a tie.");
+						playerLost(player);    //player did not win, so not counting this game in wining percentage.
+						gameOver = true;
+					} else {
+						playerWon(player);
+						System.out.println("Congratulations you won the game");
+						gameOver = true;
+					}
 				}
 			}				
 			
 			if(gameOver) {
+				System.out.println("Total games won " + player.totalWon + ". Total games played " + player.totalPlayed);
+				System.out.println("Wining percentage " + 100*((double)player.totalWon/player.totalPlayed));
 				if(nextGame()) {
+					round++;
+					playerHand = new Hand(playerName);
+					dealerHand = new Hand("dealer");
+					initialDistributionOfCards();
+					gameOver = false;
 					continue;
 				}
 				else {

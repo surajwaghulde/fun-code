@@ -116,7 +116,6 @@ public class Hand {
 		if ( totalPoints > MaxPoints) {
 			totalPoints = totalPoints - (numberOfAces*10);
 			if (totalPoints > MaxPoints) {
-				System.out.println(player.getName() + " is busted.");
 				return true;
 			}
 		}
