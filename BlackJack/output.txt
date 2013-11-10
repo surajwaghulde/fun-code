@@ -1,0 +1,534 @@
+Starting BlackJack :
+Enter your name: 
+Suraj
+player cards
+NINE SPADES
+THREE CLUBS
+dealer cards
+THREE SPADES
+TWO DIAMONDS
+Suraj total points 12
+Dealer total points 5
+Round 1
+
+Enter next move 
+HIT
+player cards
+NINE SPADES
+THREE CLUBS
+SEVEN DIAMONDS
+dealer cards
+THREE SPADES
+TWO DIAMONDS
+NINE CLUBS
+Suraj total points 19
+Dealer total points 14
+Round 2
+
+Enter next move 
+STAND
+player cards
+NINE SPADES
+THREE CLUBS
+SEVEN DIAMONDS
+dealer cards
+THREE SPADES
+TWO DIAMONDS
+NINE CLUBS
+ACE CLUBS
+Suraj total points 19
+Dealer total points 25
+Round 3
+
+Enter next move 
+STAND
+player cards
+NINE SPADES
+THREE CLUBS
+SEVEN DIAMONDS
+dealer cards
+THREE SPADES
+TWO DIAMONDS
+NINE CLUBS
+ACE CLUBS
+FIVE HEARTS
+Suraj total points 19
+Dealer total points 20
+dealer won the game
+Total games won 0. Total games played 1
+Wining percentage 0.0
+Up for next Game \../ Y/N ?
+Y
+player cards
+EIGHT HEARTS
+FOUR SPADES
+dealer cards
+THREE HEARTS
+SEVEN HEARTS
+Suraj total points 12
+Dealer total points 10
+Round 5
+
+Enter next move 
+HIT
+player cards
+EIGHT HEARTS
+FOUR SPADES
+FIVE SPADES
+dealer cards
+THREE HEARTS
+SEVEN HEARTS
+SEVEN SPADES
+Suraj total points 17
+Dealer total points 17
+Round 6
+
+Enter next move 
+HIT
+player cards
+EIGHT HEARTS
+FOUR SPADES
+FIVE SPADES
+NINE SPADES
+dealer cards
+THREE HEARTS
+SEVEN HEARTS
+SEVEN SPADES
+Suraj total points 26
+Dealer total points 17
+Suraj is busted and lost this game.
+Total games won 0. Total games played 2
+Wining percentage 0.0
+Up for next Game \../ Y/N ?
+Y
+player cards
+THREE SPADES
+TWO DIAMONDS
+dealer cards
+THREE CLUBS
+SEVEN DIAMONDS
+Suraj total points 5
+Dealer total points 10
+Round 8
+
+Enter next move 
+HIT
+player cards
+THREE SPADES
+TWO DIAMONDS
+NINE CLUBS
+dealer cards
+THREE CLUBS
+SEVEN DIAMONDS
+ACE CLUBS
+Suraj total points 14
+Dealer total points 21
+Round 9
+
+Enter next move 
+HIT
+player cards
+THREE SPADES
+TWO DIAMONDS
+NINE CLUBS
+FIVE HEARTS
+dealer cards
+THREE CLUBS
+SEVEN DIAMONDS
+ACE CLUBS
+Suraj total points 19
+Dealer total points 21
+Round 10
+
+Enter next move 
+STAND
+player cards
+THREE SPADES
+TWO DIAMONDS
+NINE CLUBS
+FIVE HEARTS
+dealer cards
+THREE CLUBS
+SEVEN DIAMONDS
+ACE CLUBS
+Suraj total points 19
+Dealer total points 21
+dealer won the game
+Total games won 0. Total games played 3
+Wining percentage 0.0
+Up for next Game \../ Y/N ?
+Y
+player cards
+EIGHT HEARTS
+FOUR SPADES
+dealer cards
+THREE HEARTS
+SEVEN HEARTS
+Suraj total points 12
+Dealer total points 10
+Round 12
+
+Enter next move 
+HIT
+player cards
+EIGHT HEARTS
+FOUR SPADES
+NINE SPADES
+dealer cards
+THREE HEARTS
+SEVEN HEARTS
+THREE SPADES
+Suraj total points 21
+Dealer total points 13
+Round 13
+
+Enter next move 
+STAND
+player cards
+EIGHT HEARTS
+FOUR SPADES
+NINE SPADES
+dealer cards
+THREE HEARTS
+SEVEN HEARTS
+THREE SPADES
+THREE CLUBS
+Suraj total points 21
+Dealer total points 16
+Round 14
+
+Enter next move 
+STAND
+player cards
+EIGHT HEARTS
+FOUR SPADES
+NINE SPADES
+dealer cards
+THREE HEARTS
+SEVEN HEARTS
+THREE SPADES
+THREE CLUBS
+TWO DIAMONDS
+Suraj total points 21
+Dealer total points 18
+Congratulations you won the game
+Total games won 1. Total games played 4
+Wining percentage 25.0
+Up for next Game \../ Y/N ?
+Y
+player cards
+SEVEN DIAMONDS
+ACE CLUBS
+dealer cards
+NINE CLUBS
+FIVE HEARTS
+Suraj total points 18
+Dealer total points 14
+Round 16
+
+Enter next move 
+HIT
+player cards
+SEVEN DIAMONDS
+ACE CLUBS
+EIGHT HEARTS
+dealer cards
+NINE CLUBS
+FIVE HEARTS
+THREE HEARTS
+Suraj total points 26
+Dealer total points 17
+Round 17
+
+Enter next move 
+HIT
+player cards
+SEVEN DIAMONDS
+ACE CLUBS
+EIGHT HEARTS
+FOUR SPADES
+dealer cards
+NINE CLUBS
+FIVE HEARTS
+THREE HEARTS
+Suraj total points 20
+Dealer total points 17
+Congratulations you won the game
+Total games won 2. Total games played 5
+Wining percentage 40.0
+Up for next Game \../ Y/N ?
+Y
+player cards
+SEVEN HEARTS
+SIX DIAMONDS
+dealer cards
+QUEEN CLUBS
+KING HEARTS
+Suraj total points 13
+Dealer total points 20
+Round 19
+
+Enter next move 
+HIT
+player cards
+SEVEN HEARTS
+SIX DIAMONDS
+FIVE SPADES
+dealer cards
+QUEEN CLUBS
+KING HEARTS
+Suraj total points 18
+Dealer total points 20
+Round 20
+
+Enter next move 
+HIT
+player cards
+SEVEN HEARTS
+SIX DIAMONDS
+FIVE SPADES
+JACK SPADES
+dealer cards
+QUEEN CLUBS
+KING HEARTS
+Suraj total points 28
+Dealer total points 20
+Suraj is busted and lost this game.
+Total games won 2. Total games played 6
+Wining percentage 33.33333333333333
+Up for next Game \../ Y/N ?
+Y
+player cards
+EIGHT SPADES
+SIX HEARTS
+dealer cards
+QUEEN HEARTS
+SIX SPADES
+Suraj total points 14
+Dealer total points 16
+Round 22
+
+Enter next move 
+HIT
+player cards
+EIGHT SPADES
+SIX HEARTS
+QUEEN DIAMONDS
+dealer cards
+QUEEN HEARTS
+SIX SPADES
+JACK CLUBS
+Suraj total points 24
+Dealer total points 26
+Both players are busted.
+Total games won 2. Total games played 7
+Wining percentage 28.57142857142857
+Up for next Game \../ Y/N ?
+Y
+player cards
+KING CLUBS
+SIX CLUBS
+dealer cards
+TEN CLUBS
+TEN SPADES
+Suraj total points 16
+Dealer total points 20
+Round 24
+
+Enter next move 
+HIT
+player cards
+KING CLUBS
+SIX CLUBS
+NINE SPADES
+dealer cards
+TEN CLUBS
+TEN SPADES
+Suraj total points 25
+Dealer total points 20
+Suraj is busted and lost this game.
+Total games won 2. Total games played 8
+Wining percentage 25.0
+Up for next Game \../ Y/N ?
+Y
+player cards
+THREE SPADES
+TWO DIAMONDS
+dealer cards
+THREE CLUBS
+SEVEN DIAMONDS
+Suraj total points 5
+Dealer total points 10
+Round 26
+
+Enter next move 
+HIT
+player cards
+THREE SPADES
+TWO DIAMONDS
+NINE CLUBS
+dealer cards
+THREE CLUBS
+SEVEN DIAMONDS
+ACE CLUBS
+Suraj total points 14
+Dealer total points 21
+Round 27
+
+Enter next move 
+HIT
+player cards
+THREE SPADES
+TWO DIAMONDS
+NINE CLUBS
+FIVE HEARTS
+dealer cards
+THREE CLUBS
+SEVEN DIAMONDS
+ACE CLUBS
+Suraj total points 19
+Dealer total points 21
+Round 28
+
+Enter next move 
+HIT
+player cards
+THREE SPADES
+TWO DIAMONDS
+NINE CLUBS
+FIVE HEARTS
+EIGHT HEARTS
+dealer cards
+THREE CLUBS
+SEVEN DIAMONDS
+ACE CLUBS
+Suraj total points 27
+Dealer total points 21
+Suraj is busted and lost this game.
+Total games won 2. Total games played 9
+Wining percentage 22.22222222222222
+Up for next Game \../ Y/N ?
+Y
+player cards
+THREE HEARTS
+SEVEN HEARTS
+dealer cards
+FOUR SPADES
+QUEEN CLUBS
+Suraj total points 10
+Dealer total points 14
+Round 30
+
+Enter next move 
+HIT
+player cards
+THREE HEARTS
+SEVEN HEARTS
+NINE SPADES
+dealer cards
+FOUR SPADES
+QUEEN CLUBS
+THREE SPADES
+Suraj total points 19
+Dealer total points 17
+Congratulations you won the game
+Total games won 3. Total games played 10
+Wining percentage 30.0
+Up for next Game \../ Y/N ?
+Y
+player cards
+THREE CLUBS
+SEVEN DIAMONDS
+dealer cards
+TWO DIAMONDS
+NINE CLUBS
+Suraj total points 10
+Dealer total points 11
+Round 32
+
+Enter next move 
+HIT
+player cards
+THREE CLUBS
+SEVEN DIAMONDS
+ACE CLUBS
+dealer cards
+TWO DIAMONDS
+NINE CLUBS
+FIVE HEARTS
+Suraj total points 21
+Dealer total points 16
+Round 33
+
+Enter next move 
+STAND
+player cards
+THREE CLUBS
+SEVEN DIAMONDS
+ACE CLUBS
+dealer cards
+TWO DIAMONDS
+NINE CLUBS
+FIVE HEARTS
+EIGHT HEARTS
+Suraj total points 21
+Dealer total points 24
+Dealer is busted with points 24 and you won this game.
+Total games won 4. Total games played 11
+Wining percentage 36.36363636363637
+Up for next Game \../ Y/N ?
+Y
+player cards
+THREE HEARTS
+SEVEN HEARTS
+dealer cards
+FOUR SPADES
+QUEEN CLUBS
+Suraj total points 10
+Dealer total points 14
+Round 35
+
+Enter next move 
+HIT
+player cards
+THREE HEARTS
+SEVEN HEARTS
+ACE SPADES
+dealer cards
+FOUR SPADES
+QUEEN CLUBS
+KING SPADES
+Suraj total points 21
+Dealer total points 24
+Dealer is busted with points 24 and you won this game.
+Total games won 5. Total games played 12
+Wining percentage 41.66666666666667
+Up for next Game \../ Y/N ?
+Y
+player cards
+JACK SPADES
+EIGHT CLUBS
+dealer cards
+SIX SPADES
+TEN CLUBS
+Suraj total points 18
+Dealer total points 16
+Round 37
+
+Enter next move 
+STAND
+player cards
+JACK SPADES
+EIGHT CLUBS
+dealer cards
+SIX SPADES
+TEN CLUBS
+QUEEN HEARTS
+Suraj total points 18
+Dealer total points 26
+Dealer is busted with points 26 and you won this game.
+Total games won 6. Total games played 13
+Wining percentage 46.15384615384615
+Up for next Game \../ Y/N ?
+N
+
