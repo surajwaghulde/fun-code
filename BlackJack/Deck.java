@@ -33,9 +33,9 @@ public class Deck {
 		return current < deck.length;
 	}
 	
-	public void shuffle() {		
-		for(int i=0; i<deck.length; i++) {
-			int shuffleIndex = ((int)(Math.random() * i) - i) + i;  // shuffle with equal probability
+	public void shuffle() {
+		for(int i = current; i<deck.length; i++) {
+			int shuffleIndex = ((int)(Math.random() * (deck.length - i)) + i);  // shuffle with equal probability
 			swapCards(shuffleIndex, i);
 		}
 	}
