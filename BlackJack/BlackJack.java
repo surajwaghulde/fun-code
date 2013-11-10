@@ -188,6 +188,7 @@ public class BlackJack {
 		}		
 	}
 	
+	// check whether user wants to play more
 	public boolean nextGame() {
 		System.out.println("Up for next Game \\../ Y/N ?");
 		if(input.nextLine().equalsIgnoreCase("y")) {
