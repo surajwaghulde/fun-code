@@ -1,7 +1,11 @@
 package BlackJack;
 
+/*
+ * Player of BlackJack game
+ */
 public class Player {
 	
+	// defining types of players
 	public static enum Type {
 		PLAYER, DEALER;
 	}	

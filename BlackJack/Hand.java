@@ -5,7 +5,9 @@ import java.util.ArrayList;
 import BlackJack.Deck;
 import BlackJack.Card;
 import BlackJack.Player;
-
+/*
+ * A hand in card games
+ */
 public class Hand {
 
 	private Player player;
@@ -15,13 +17,14 @@ public class Hand {
 	boolean isSurrender = false;
 	boolean doubleDown = false;
 	boolean stand = false;
-	private int bet;
 	private ArrayList<Card> cards = new ArrayList<Card>();
 	
+	// Initialize the hand setting the player name
 	public Hand(String name) {
 		this.player = new Player(name);
 	}
 	
+	// get the next card from the deck
 	public Card getNextCard(Deck deck){
 		Card card = deck.draw();
 		if(card != null){
@@ -31,10 +34,11 @@ public class Hand {
 		return null;		
 	}	
 	
+	// update points for the card drawn
 	public void updatePoints(Card card) {
 		switch (card.getRank()) {
 		case ACE:
-			totalPoints += 11;
+			totalPoints += 11;   // counting ACE as 11 unless total points goes over 21
 			numberOfAces++;
 			break;
 		case TWO:
@@ -65,16 +69,17 @@ public class Hand {
 		case JACK:
 		case QUEEN:
 		case KING:
-			totalPoints += 10;
+			totalPoints += 10;    // all face cards are 10
 			break;
 		}
 	}
 	
+	// overloaded update points to compute totalpoints for all the cards initially drawn
 	public void updatePoints() {
 		for (Card card : cards) {
 			switch (card.getRank()) {
 			case ACE:
-				totalPoints += 11;
+				totalPoints += 11;    // counting ACE as 11 unless total points goes over 21
 				numberOfAces++;
 				break;
 			case TWO:
@@ -105,12 +110,13 @@ public class Hand {
 			case JACK:
 			case QUEEN:
 			case KING:
-				totalPoints += 10;
+				totalPoints += 10;   // all face cards are 10
 				break;
 			}
 		}
 	}
 	
+	// check if player is busted
 	public boolean isBusted() {
 		// ace adjustment - remove 10 points every time there is an ace and total is a bust
 		if ( totalPoints > MaxPoints) {
@@ -122,18 +128,22 @@ public class Hand {
 		return false;
 	}
 	
+	// check player can call HIT
 	public boolean checkHit() {
 		return (!isBusted() && !doubleDown && !isSurrender);
 	}
 
+	// Player surrenders
 	public void doSurrender() {
 		isSurrender = true;
 	}
 	
+	// Player stands
 	public void doStand() {
 		stand = true;
 	}
 	
+	// check player can call double down
 	public boolean checkDouble() {
 		if(!isBusted() && !doubleDown && !isSurrender) {
 			doubleDown = true;
@@ -142,18 +152,12 @@ public class Hand {
 		return false;
 	}
 	
+	// check whether dealer is going to HIT
 	public boolean isSoft17(){
 		if (numberOfAces==1 && totalPoints<18) {
 			return true;
 		}
 		if (numberOfAces==0 && totalPoints<17) {
-			return true;
-		}
-		return false;
-	}
-	
-	public boolean is21() {
-		if (totalPoints == 21) {
 			return true;
 		}
 		return false;
@@ -173,10 +177,5 @@ public class Hand {
 
 	public int getTotalPoints() {
 		return totalPoints;
-	}
-
-	public void setTotalPoints(int totalPoints) {
-		this.totalPoints = totalPoints;
-	}
-	
+	}	
 }
