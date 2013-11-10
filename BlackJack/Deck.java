@@ -4,7 +4,7 @@ import BlackJack.Card;
 
 public class Deck {
 
-	private static final int DECK_SIZE = 52; // single deck of cards
+	private static final int DECK_SIZE = 52;   // single deck of cards
 	
 	private Card[] deck;
 	private int current;
@@ -16,6 +16,10 @@ public class Deck {
 		for(Card.Rank r : Card.Rank.values()) 
 			for(Card.Suit s : Card.Suit.values()) 
 				deck[i++] = new Card(r, s);
+	}
+	
+	public Card[] getDeck() {    // single deck
+		return deck;
 	}
 	
 	public Card draw() {
@@ -31,7 +35,7 @@ public class Deck {
 	
 	public void shuffle() {		
 		for(int i=0; i<deck.length; i++) {
-			int shuffleIndex = ((int)(Math.random() * i) - i) + i;
+			int shuffleIndex = ((int)(Math.random() * i) - i) + i;  // shuffle with equal probability
 			swapCards(shuffleIndex, i);
 		}
 	}

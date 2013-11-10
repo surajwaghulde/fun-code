@@ -9,7 +9,7 @@ public class Card {
 	public enum Suit {
 		SPADES, HEARTS, CLUBS, DIAMONDS;
 	}
-	
+
 	private Rank rank;
 	private Suit suit;
 	
@@ -25,6 +25,22 @@ public class Card {
 	
 	public String toString() {
 		return rank + " " + suit;
+	}
+	
+	public Rank getRank() {
+		return rank;
+	}
+
+	public void setRank(Rank rank) {
+		this.rank = rank;
+	}
+
+	public Suit getSuit() {
+		return suit;
+	}
+
+	public void setSuit(Suit suit) {
+		this.suit = suit;
 	}
 	
 }
