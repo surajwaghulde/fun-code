@@ -7,5 +7,3 @@ cd ..
 java BlackJack.BlackJack
 
 
-Some findings - 
-I never have gambled yet in my life :) but I went through BlackJack youtube videos and wrote the BlackJack here. Since I found different definitions for wining - I count wining the table as 1 win from 1 game. I interpreted shuffling of deck on every 6 rounds as shuffle and use the cards from older hands. 
