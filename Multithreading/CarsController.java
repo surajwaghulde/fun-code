@@ -25,7 +25,7 @@ public class CarsController {
 	
 	public static void main(String[] args) {
 		CarsController carsController = new CarsController();
-		carsController.simulateCars(1000);		
+		carsController.simulateCars(5000);		
 	}
 
 }

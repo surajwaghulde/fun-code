@@ -22,10 +22,13 @@ public class Car extends Thread {
    public void run() {
         try {
         	System.out.println("car " + licensePlate + " has arrived at bridge in direction " + carDirection); 
-        	bridge.numberOfCarsInDirection[carDirection].incrementAndGet();                            	 
-            while(!bridge.enter(this)) {	// enter the bridge, if method return false that means car was not able to enter so continuous retry in while loop.
-            	Thread.sleep(10);	
-            }
+        	bridge.numberOfCarsInDirection[carDirection].incrementAndGet();
+        	synchronized (this.bridge) {
+                while(!bridge.enter(this)) {	// enter the bridge, if method return false that means car was not able to enter so continuous retry in while loop.
+                	System.out.println("car " + licensePlate + " is waiting. ");
+                	this.bridge.wait();
+                }        		
+        	}
             bridge.exit(this);	// exit the bridge.
         }
         catch (Exception e) {
